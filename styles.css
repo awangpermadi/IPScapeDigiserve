@@ -1,0 +1,101 @@
+html,
+body {
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: calc(1 * (1vw + 1vh - 1vmin));
+  background-color: #fff;
+  margin: 10px 1em;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 300px 1fr 3fr;
+  grid-template-rows: 2fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.hidden {
+  display: none;
+}
+
+#frame-wrapper {
+  width: 300px;
+}
+
+#ipscape-cti-frame {
+  min-height: 500px;
+  height: calc(1vh / 2);
+  border: 1px solid darkgray;
+  max-width: 300px;
+}
+
+.click-to-dial.disabled:hover {
+  cursor: not-allowed;
+}
+
+.click-to-dial.active {
+  color: coral;
+}
+
+.click-to-dial.disabled {
+  color: darkgrey;
+  text-decoration: underline;
+}
+
+#log-list,
+.action-list {
+  list-style-type: none !important;
+  margin-left: 0;
+}
+
+#log-list-items {
+  padding-inline-start: 1em;
+}
+
+ul > li {
+  list-style: none !important;
+}
+
+.action-list {
+  padding-inline-start: 0;
+}
+
+.action-list > li {
+  padding-bottom: 1em;
+  border-bottom: 1px solid #cccccc;
+}
+
+#log-list > li,
+#log-list-items > li {
+  margin: 1em auto;
+}
+
+#log-list-items > li {
+  padding-inline-start: 0;
+  overflow-wrap: break-word;
+}
+
+#log-list-items > li > .timestamp {
+  font-weight: bolder;
+  margin: 0.5em auto;
+}
+
+#log-wrapper {
+  min-height: 500px;
+  height: calc(100vh - 130px);
+  overflow-wrap: break-word;
+}
+.log {
+  height: 99%;
+  overflow: scroll;
+}
+.log,
+.hero {
+  padding: 1.5em;
+  background-color: aliceblue;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+}

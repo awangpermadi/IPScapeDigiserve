@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ipSCAPE CTI Adaptor</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./styles.css"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="grid">
+        <div id="frame-wrapper">
+          <h2>CTI Adaptor</h2>
+          <iframe id="ipscape-cti-frame" name="target"></iframe>
+        </div>
+        <div id="actions-wrapper">
+          <h2>Action Buttons</h2>
+          <div class="hero">
+            <ul class="action-list">
+              <li>
+                <p>Is Logged in?:</p>
+                <button
+                  type="button"
+                  id="btn-isAuthorised"
+                  data-label="isAuthorised"
+                >
+                  Authorised?
+                </button>
+              </li>
+              <li>
+                <p>Click to Dial:</p>
+                <p id="clickToDialLink" class="click-to-dial disabled">
+                  <i class="fa fa-minus-circle" aria-hidden="true"></i> +61 2
+                  8999 3333
+                </p>
+              </li>
+              <li>
+                <p>Get Agent Details:</p>
+                <button
+                  type="button"
+                  id="btn-getAgentDetails"
+                  data-label="getAgentDetails"
+                >
+                  Agent Details
+                </button>
+              </li>
+              <li>
+                <p>Get Agent Campaigns:</p>
+                <button
+                  type="button"
+                  id="btn-getAgentCampaigns"
+                  data-label="getAgentCampaigns"
+                >
+                  Agent Campaigns
+                </button>
+              </li>
+              <li>
+                <p>Get Agent State:</p>
+                <button
+                  type="button"
+                  id="btn-getAgentPresence"
+                  data-label="getAgentPresence"
+                >
+                  Agent Presence
+                </button>
+              </li>
+              <li>
+                <p>Get Pause Reasons:</p>
+                <button
+                  type="button"
+                  id="btn-getPauseReasons"
+                  data-label="getPauseReasons"
+                >
+                  Pause Reasons
+                </button>
+              </li>
+              <li>
+                <p>Get Current Interaction:</p>
+                <button
+                  type="button"
+                  id="btn-getCurrentInteraction"
+                  data-label="getCurrentInteraction"
+                >
+                  Current Interaction
+                </button>
+              </li>
+              <li>
+                <p>Get Integration Settings:</p>
+                <button
+                  type="button"
+                  id="btn-getIntegrationSettings"
+                  data-label="getIntegrationSettings"
+                  data-payload="qa"
+                >
+                  Integration Settings
+                </button>
+              </li>
+              <li>
+                <p>Add row to "In Call Component":</p>
+                <button
+                  type="button"
+                  id="btn-inCallComponentOptionAdd"
+                  data-label="inCallComponentOptionAdd"
+                  data-payload='{ "name": "whoId", "option": { "label": "Johnny Walker", "value": "0010I00002WkQtnQAF", "selected": true }}'
+                >
+                  Update Component
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="log-wrapper">
+          <h2>Log</h2>
+          <ul id="log-list" class="log">
+            <li id="log-placeholder">
+              <a href="#" id="clearLogLink">Clear Log</a>
+            </li>
+            <li class="log-item">
+              <ul id="log-list-items"></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
