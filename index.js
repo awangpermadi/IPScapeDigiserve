@@ -3,7 +3,7 @@
 
 (function () {
   const hostName = "demo-ds.ccc.digiserve.id";
-  const integrationToken = "a3cc319ebb0560182cb68753";
+  const integrationToken = "055432322c60baf90f8f6e9a";
 
   let ctiUrl = `https://${hostName}/cti`;
   let href = null;
